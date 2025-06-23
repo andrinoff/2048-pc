@@ -1,0 +1,51 @@
+{
+  "name": "2048-electron",
+  "productName": "2048",
+  "description": "2048 built for PCs",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "andrinoff",
+  "build": {
+    "appId": "com.andrinoff.2048",
+    "productName": "2048",
+    "files": [
+        "main.js",
+        "renderer.js",
+        "index.html",
+        "styles.css",
+        "preload.js"
+    ],
+    "mac": {
+    "category": "public.app-category.developer-tools"
+    },
+    "win": {
+        "target": "nsis"
+    },
+    "linux": {
+        "target": "AppImage"
+    }
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "31.2.1",
+    "electron-builder": "^26.0.12"
+  }
+}
